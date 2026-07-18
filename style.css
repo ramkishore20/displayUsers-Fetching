@@ -15,6 +15,12 @@ h1{
     margin-bottom: 20px;
 }
 
+#loader{
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+}
+
 .container{
     display: flex;
     flex-wrap: wrap;

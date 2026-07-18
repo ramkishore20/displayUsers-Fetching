@@ -1,13 +1,19 @@
 const container = document.getElementById("userContainer");
+const loader = document.getElementById("loader");
 
 async function fetchUser(){
     try{
+        loader.style.display = "block"
         const response = await fetch("https://jsonplaceholder.typicode.com/users");
         const users = await response.json();
         userDisplay(users);
     }
     catch(error){
+        constainer.innerHTML = "<p>Error Loading Data...</p>"
         console.log(error);
+    }
+    finally{
+        loader.style.display = "none";
     }
 }
 fetchUser();
